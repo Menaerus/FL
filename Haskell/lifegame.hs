@@ -4,7 +4,7 @@ import Data.Array
 --    where a circular policy is applied 
 myrange :: Int -> Int -> Int -> [Int]
 myrange i low high  
-    | i > low && i < high = [i-1..i+1]
+    | i > low && i < high = [i-1..i+1]                                                                                       
     | i == low && (i+1) < high = [low..i+1]++[high]
     | i == low && (i+1) == high = [low..high]
     | (i-1) > low  && i == high = [low]++[i-1 .. high]  
