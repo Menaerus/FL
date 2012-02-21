@@ -32,7 +32,7 @@ test list width height fontsize = testboard list (div height fontsize) (div widt
 -- Given a list of words, min font size, max font size, width and height
 -- where max is not a valid font size and min is
 -- returns a font size r, such that min <= r < max such that
--- for all s > r, s is not valid
+-- for all s > r, s is not valid and r is valid
 -- it performs at most log(max) recursive calls
 binarysearch :: [[Char]] -> Int -> Int -> Int -> Int -> Int  
 binarysearch list mini maxi width height 
