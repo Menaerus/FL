@@ -1,3 +1,4 @@
+module BillBoard (solveone, solveboard) where 
 -- Given a list of words and a line length       
 -- returns the remaining list of words after greedily adding all possible
 -- words to a line of that length
@@ -46,4 +47,7 @@ binarysearch list mini maxi width height
 solveone :: [Char] -> Int -> Int -> Int
 solveone [] _ _ = 0  
 solveone text width height = binarysearch (words text) 0 ((minimum [width,height]) + 1) width height  
+
+-- string version of solveone
+solveboard l = solveone (unwords (drop 2 (words l))) (read (head (words l))) (read (head (tail (words l))))
 
